@@ -6,6 +6,8 @@ authors = [
     {name = "VincentBanda010",email = "vincentbanda010@gmail.com"}
 ]
 readme = "README.md"
+package-mode = false
+
 requires-python = ">=3.12"
 dependencies = [
 ]
