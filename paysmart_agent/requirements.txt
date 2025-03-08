@@ -49,7 +49,6 @@ keyring==25.6.0
 more-itertools==10.6.0
 msgpack==1.1.0
 packaging==24.2
--e git+ssh://git@github.com/VincentBanda010/paysmart-agent-backend.git@4fc6e221a7873a89a47df4f207e421238ea5b491#egg=paysmart_agent
 pbs-installer==2025.2.12
 pkginfo==1.12.1.2
 platformdirs==4.3.6
