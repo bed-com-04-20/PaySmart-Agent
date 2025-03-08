@@ -27,9 +27,12 @@ google-auth==2.38.0
 google-auth-httplib2==0.2.0
 google-cloud-core==2.4.2
 google-cloud-speech==2.31.0
+google-cloud-storage==3.1.0
 google-cloud-texttospeech==2.25.0
 google-cloud-translate==3.20.1
+google-crc32c==1.6.0
 google-generativeai==0.8.4
+google-resumable-media==2.7.2
 googleapis-common-protos==1.68.0
 grpc-google-iam-v1==0.14.0
 grpcio==1.70.0
@@ -49,6 +52,7 @@ keyring==25.6.0
 more-itertools==10.6.0
 msgpack==1.1.0
 packaging==24.2
+-e git+ssh://git@github.com/VincentBanda010/paysmart-agent-backend.git@dde2b7b192d80deb44bcec23b4f1194c65dd9416#egg=paysmart_agent
 pbs-installer==2025.2.12
 pkginfo==1.12.1.2
 platformdirs==4.3.6
