@@ -14,14 +14,25 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Google Cloud credentials
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+# Get the secret content (the JSON string)
+google_credentials_json = os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON')
 
-GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
+if google_credentials_json is None:
+    raise ValueError("GOOGLE_APPLICATION_CREDENTIALS_JSON secret is not set.")
+
+# Write the credentials to a file
+credentials_file_path = '/tmp/credentials.json'  # Path to store the file temporarily
+
+with open(credentials_file_path, 'w') as f:
+    f.write(google_credentials_json)
+
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the file path
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_file_path
 
 # Gemini API key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
