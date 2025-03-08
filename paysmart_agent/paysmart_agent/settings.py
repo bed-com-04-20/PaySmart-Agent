@@ -20,6 +20,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Google Cloud credentials
 GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+
+if GOOGLE_APPLICATION_CREDENTIALS:
+    credentials_path = "/home/predator/python/django/paysmart_agent/pivotal-biplane-449212-h1-49b9344961e2.json"
+
+    with open(credentials_path, "wb") as f:
+        f.write(base64.b64decode(credentials_path))
+
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_APPLICATION_CREDENTIALS
+
+else:
+    raise EnvironmentError("Google Credentials are missing")
+    
 GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
 
 # Gemini API key
