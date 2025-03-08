@@ -14,24 +14,27 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
+import base64
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Google Cloud credentials
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+# Read the Base64-encoded credentials from the environment variable
+GOOGLE_CREDENTIALS_BASE64 = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
 
-if GOOGLE_APPLICATION_CREDENTIALS:
-    credentials_path = "/home/predator/python/django/paysmart_agent/pivotal-biplane-449212-h1-49b9344961e2.json"
+if GOOGLE_CREDENTIALS_BASE64:
+    credentials_path = "/tmp/google-credentials.json"  # Use /tmp to store it temporarily
 
+    # Decode the Base64 string and write it as a JSON file
     with open(credentials_path, "wb") as f:
-        f.write(base64.b64decode(credentials_path))
+        f.write(base64.b64decode(GOOGLE_CREDENTIALS_BASE64))
 
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_APPLICATION_CREDENTIALS
+    # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentials_path
 
 else:
-    raise EnvironmentError("Google Credentials are missing")
-    
+    raise EnvironmentError("Google Credentials are missing!")
+
 GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
 
 # Gemini API key
