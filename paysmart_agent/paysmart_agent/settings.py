@@ -19,7 +19,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Google Cloud credentials
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
 
