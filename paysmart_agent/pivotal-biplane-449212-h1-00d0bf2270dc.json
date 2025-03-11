@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pivotal-biplane-449212-h1",
+  "private_key_id": "00d0bf2270dc3659c68c8457b25764f1c715f91a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCphqaegaEeCd4w\nvYF3m1fRxyS001cZOSsdzpz+13d2F+FyL9/21YBDEtf/d02eISgnE3yD3MVK5Rhl\nxEeIAjefAU1AS0p+ngVKHmCuwV1NC1K7bEY8Z4g65EVGkQe8qYFMl/e09PMJKC8a\ntKKdAqCNC3+ZgkQquVE3rBUqBzEOR0Ih9DDv4vHi8QEULBfAQYlRUXaVBu0DKJ78\nUvHTik8mMQanDxgUHKdM1MHsrthDKlyl6HXuCcoKSxwA54HfPevskAMuBtHIVjvc\nMqRpSvXfYYCXpsOpeYLodiUsAxc8JDcWrVulGEao0s/XNebcHjAVgvsDo6C998xo\nFemxjVWFAgMBAAECggEAAf+M0jx77jM2k8OAFa1WlSnwRFNjaPA0EmdfkV9v0IwK\ng8KNtMaieufrdN7uoskIRKGlq5Y8GxxlM7njD/baufyVcQcSKzjong2KnTS5SVGz\nWXM2xrp/sBYFvQWzniUvWXxHFrJ2dOqs13c+nXQs+Uyj5ebTr988VlgobbTk/qKS\ndFvwOHEGcoqoCdA7SJC4/lJCYLI05OHWePRaOsNQAthVgEaLzOV1szBdMeeEkKzJ\nKZZcvs1rnU6MpicaN41DzqHOFFchdl1RGhE/6/qrBEqYffcFx9ybc+ESc1YrbHi3\nbMqyeH1N0zsPfR5VBMiynAaYMAkNV2R4duGnBHWHxwKBgQDnQp22yMVNx/eIbDr1\nhQfgJfCydO+nv3faEb4oexHaa72zMhgK60ZuM1OLOUqve7oy0uQJ6OoflTDqDTmW\nSMGuumshWwZthJ9+dlgHciMi2kFzn5S3hekW56jGugadsf1Ru60TwlsYx+504gZ5\no1WxyjP7I/7YvomfTSOVrUM79wKBgQC7qVtBhk84i/HSo4tdSU6vSR6WaHjV4y3A\ngunkpau7GMhhAfTfR+bCvlnRCk+fhOC5hkq7f9lwORDuR+9pzALUrQ2dV/xQjFyc\ny08Z0wENhio62L/H6RxUpP+hlRLsUe9BpTE9YpCrIgxhhrm8t6JrKkR9bZDF3LJT\nGUA9HSDDYwKBgQCxJcxeKelJrbYl4JJBZIgl4apBaWXzX63Vc+XwaGXCpOmJjQPx\nyUwIOnTynw5g4iw9pmJcXPiK/OOdRkgooM8Mo2xQ/sMrvX3Xh5vjCEF1/y5H/aQT\n+RYWH5qfr/xFbASaSWNJUYYqs2wsSL+hCccpC7VJ2cbsDPiq+JIbo79u/QKBgAgL\n2OfUVG0+Qt4fOQiE7iTB49fbHuM83GdWtaSiHdzl0SGnrdItCQ3sj3lREdzrG5+Y\nzHeBodcX+0vcNb25i52G1gCbFyx0+DuY1AltbKwhxonDZWWy7w4KDRPmimsrkDCm\nXpgdM8rCqPk9h5U54nLp2wnturlhHxxFBuYX66G1AoGAYipi4LTIocXZadl/825u\ncvXvBY6aSIkWIBMyAhP7nwcb33IYim9AcAxVCi/XhH4Qpou4YEN8hIR9p9m/JPV4\nfqZ6c5PTQxjT/DaQshQIh3WD9j0iAssDJEY5COlvnyBHT4IR9pHV7SAUOBjegsxV\nUc4XdSCcWgGr0h7BAPC9frk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "myvoice@pivotal-biplane-449212-h1.iam.gserviceaccount.com",
+  "client_id": "104566650564090715410",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/myvoice%40pivotal-biplane-449212-h1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
