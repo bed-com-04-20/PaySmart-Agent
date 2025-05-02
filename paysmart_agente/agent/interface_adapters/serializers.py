@@ -9,9 +9,9 @@ class ChatMessageSerializer(serializers.Serializer):
     )
 
     def validate_message(self, value):
-        if len(value) < 5:
-            raise serializers.ValidationError("Message must be at least 5 characters long.")
-        return value
+    # No length restriction
+     return value
+
 
 class VoiceChatSerializer(serializers.Serializer):
     audio_file = serializers.FileField()

@@ -12,7 +12,7 @@ from agent.infrastructure.gemini_adapter.start_chat import start_chat
 from agent.infrastructure.google_speech_to_text.transcribe_audio import transcribe_audio
 from agent.infrastructure.google_text_to_speech.synthesize_text import synthesize_text
 from agent.infrastructure.audio_converter.convert_m4a_to_wav import convert_m4a_to_wav
-from agent.presentation.config import model, speech_client, tts_client
+# from agent.presentation.config import model, speech_client, tts_client
 
 logger = logging.getLogger('agent')
 

@@ -5,8 +5,8 @@ from google.cloud import speech_v1p1beta1 as speech
 from agent.infrastructure.gemini_adapter.init_gemini import init_gemini
 
 # External settings
-GOOGLE_APPLICATION_CREDENTIALS = settings.GOOGLE_APPLICATION_CREDENTIALS
-GOOGLE_CLOUD_PROJECT_ID = settings.GOOGLE_CLOUD_PROJECT_ID
+# GOOGLE_APPLICATION_CREDENTIALS = settings.GOOGLE_APPLICATION_CREDENTIALS
+# GOOGLE_CLOUD_PROJECT_ID = settings.GOOGLE_CLOUD_PROJECT_ID
 GEMINI_API_KEY = settings.GEMINI_API_KEY
 
 if not GEMINI_API_KEY:
@@ -30,13 +30,13 @@ system_instruction = (
     "Be friendly, insightful, and supportive, ensuring customers feel confident and assisted."
 )
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
 
-# Initialize Google Cloud clients
-translate_client = translate_v3.TranslationServiceClient()
-tts_client = texttospeech_v1.TextToSpeechClient()
-speech_client = speech.SpeechClient()
-parent = f"projects/{GOOGLE_CLOUD_PROJECT_ID}/locations/global"
+# # Initialize Google Cloud clients
+# translate_client = translate_v3.TranslationServiceClient()
+# tts_client = texttospeech_v1.TextToSpeechClient()
+# speech_client = speech.SpeechClient()
+# parent = f"projects/{GOOGLE_CLOUD_PROJECT_ID}/locations/global"
 
 # Initialize Gemini model
 model = init_gemini(GEMINI_API_KEY, generation_config, system_instruction)

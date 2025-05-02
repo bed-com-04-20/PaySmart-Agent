@@ -6,7 +6,7 @@ from agent.utils import standard_response
 from agent.usecases.process_chat_translation import process_chat_translation
 from agent.infrastructure.gemini_adapter.start_chat import start_chat
 from agent.infrastructure.google_translator.translate_text import translate_text
-from agent.presentation.config import model, translate_client, parent
+# from agent.presentation.config import model, translate_client, parent
 
 logger = logging.getLogger('agent')
 

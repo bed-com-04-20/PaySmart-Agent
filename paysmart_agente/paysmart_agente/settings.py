@@ -19,9 +19,9 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Google Cloud credentials
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+# GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
-GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
+# GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
 
 # Gemini API key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'agent',
     'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'paysmart_agent.urls'
+ROOT_URLCONF = 'paysmart_agente.urls'
 
 TEMPLATES = [
     {
@@ -84,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'paysmart_agent.wsgi.application'
+WSGI_APPLICATION = 'paysmart_agente.wsgi.application'
 
 
 # Database
@@ -97,8 +98,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse(database_url)
+# database_url = os.environ.get("DATABASE_URL")
+# DATABASES["default"] = dj_database_url.parse(database_url)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -142,3 +143,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+NESTJS_API_URL = "https://unimatherapyapplication.com/paysmart" 
+
+NESTJS_API_KEY = "SEC-TEST-MwiucQ5HO8rCVIWzykcMK13UkXTdsO7u"
