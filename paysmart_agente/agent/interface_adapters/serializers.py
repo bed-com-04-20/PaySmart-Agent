@@ -9,7 +9,6 @@ class ChatMessageSerializer(serializers.Serializer):
     )
 
     def validate_message(self, value):
-    # No length restriction
      return value
 
 

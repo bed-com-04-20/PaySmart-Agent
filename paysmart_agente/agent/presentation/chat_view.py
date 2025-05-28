@@ -25,13 +25,29 @@ class ChatView(APIView):
         session_context = request.session.get('chat_context', {})
 
         try:
-            # TV payment flow
-            if any(word in user_message.lower() for word in ["tv", "package", "plan", "subscribe", "channel", "show"]):
+            # Check if we're in an active TV payment flow
+            is_in_payment_flow = (
+                any(word in user_message.lower() for word in ["tv", "package", "plan", "subscribe", "channel", "show"]) or
+                session_context.get("payment_params") or
+                session_context.get("awaiting_confirmation") or
+                session_context.get("processing_payment")
+            )
+
+            if is_in_payment_flow:
                 model_response = TVPaymentHandler.handle_payment_flow(
                     user_message,
                     session_context
                 )
-            # General chat
+                # Stay in payment flow until session is cleared
+                if not session_context.get("payment_params") and not session_context.get("processing_payment"):
+                    # Only exit payment flow if session was cleared (payment completed/failed/cancelled)
+                    request.session['chat_context'] = session_context
+                    request.session.modified = True
+                    return standard_response(
+                        status_type="success",
+                        data={"response": model_response},
+                        message="TV payment processed successfully."
+                    )
             else:
                 model_response = process_chat_message(
                     user_message, 

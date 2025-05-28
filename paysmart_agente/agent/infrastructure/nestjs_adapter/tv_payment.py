@@ -75,7 +75,19 @@ class TVPaymentService:
                 timeout=10
             )
             response.raise_for_status()
-            return response.json()
+            data = response.json()
+            
+            # Ensure consistent response format
+            if "summary" not in data:
+                data["summary"] = {
+                    "transactionDate": time.strftime("%m/%d/%Y"),
+                    "transactionTime": time.strftime("%I:%M:%S %p"),
+                    "tvPackage": f"Package {package_id}",
+                    "accountNumber": account_number,
+                    "amount": 0, 
+                    "tx_ref": data.get("transactionRef", "")
+                }
+            return data
             
         except requests.RequestException as e:
             logger.error(f"Subscription failed: {str(e)}")
